@@ -4,7 +4,7 @@ RUN apk add --update --no-cache git
 
 RUN go get -v github.com/googleapis/google-cloud-go/bigtable/cmd/emulator/...
 
-FROM alpine:3.12
+FROM alpine:3.16.3
 
 COPY --from=builder /go/bin/emulator /cbtemulator
 
